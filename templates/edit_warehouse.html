@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编辑仓库</title>
+</head>
+<body>
+    <h1>编辑仓库</h1>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <form method="post">
+  <div>
+    <label for="name">仓库名称:</label>
+    <input type="text" id="name" name="name" value="{{ warehouse.name }}" required>
+  </div>
+  <div>
+    <label for="location">地点:</label>
+    <input type="text" id="location" name="location" value="{{ warehouse.location }}" required>
+  </div>
+  <div>
+    <button type="submit">更新</button>
+    <button type="button" onclick="history.back()">取消</button>
+  </div>
+</form>
+</body>
+</html>

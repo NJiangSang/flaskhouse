@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta >
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>新增物品</title>
+</head>
+<body>
+    <h1>新增物品</h1>
+    <form method="post">
+  <div>
+    <label for="name">物品名称:</label>
+    <input type="text" id="name" name="name" value="{{ name }}" required>
+  </div>
+  <div>
+    <label for="quantity">数量:</label>
+    <input type="number" id="quantity" name="quantity" value="{{ quantity }}" required>
+  </div>
+  <div>
+    <button type="submit">新增</button>
+    <button type="button" onclick="history.back()">取消</button>
+  </div>
+</form>
+
+</body>
+</html>

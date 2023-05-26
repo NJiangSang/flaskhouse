@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增仓库</title>
+    <style>
+        /* Add media query for devices with width less than 600px */
+        @media (max-width: 600px) {
+            /* Adjust input box width */
+            input[type="text"] {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>新增仓库</h1>
+    <form action="{{ url_for('create_warehouse') }}" method="POST">
+        <label for="name" class="form-label">仓库名称:</label>
+        <input type="text" id="name" name="name" class="form-input" required>
+
+        <label for="location" class="form-label">仓库位置:</label>
+        <input type="text" id="location" name="location" class="form-input" required>
+
+        <input type="submit" value="创建" class="form-submit">
+
+    </form>
+    <a href="{{ url_for('index') }}" class="btn">返回仓库列表</a>
+</body>
+</html>
