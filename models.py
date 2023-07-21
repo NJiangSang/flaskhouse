@@ -84,7 +84,8 @@ class Item:
     @staticmethod
     def create(name, quantity, warehouse_id):
         cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO items (name, quantity, warehouse_id) VALUES (%s, %s, %s)", (name, quantity, warehouse_id))
+        cur.execute("INSERT INTO items (name, quantity, warehouse_id) VALUES (%s, %s, %s)",
+                    (name, quantity, warehouse_id))
         mysql.connection.commit()
         cur.close()
 

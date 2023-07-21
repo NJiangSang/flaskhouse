@@ -83,4 +83,3 @@ def delete_warehouse(warehouse_id):
     return render_template('index.html', warehouses=warehouses)
 
 
-

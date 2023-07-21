@@ -8,5 +8,3 @@ app.config['MYSQL_PASSWORD'] = 'Admin123!'  #密码
 app.config['MYSQL_DB'] = 'warehouse'   #创建数据库
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 mysql = MySQL(app)
-
-
